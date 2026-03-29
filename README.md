@@ -1,28 +1,35 @@
 # SaaS Starter BR
 
-Starter kit full stack para lancamento rapido de SaaS B2B.
+Produto real da DouglasDev para operacao de modulos com painel interativo full stack.
 
-## Problema
-Founders gastam semanas repetindo setup tecnico de base.
+## O que este repositorio entrega
+- API Node/Express com validacao de entrada via Zod.
+- Persistencia local de dados em arquivo (modo desenvolvimento/producao).
+- Filtros reais por status, prioridade e busca textual.
+- Exportacao CSV para analise operacional.
+- Frontend React responsivo com feedback de carregamento/erro e interacoes completas.
 
-## Publico
-Founders tecnicos e devs full stack.
+## Fluxo operacional
+1. Registrar modulo com escopo de negocio.
+2. Priorizar implementacao conforme etapa do produto.
+3. Concluir modulo e validar integracao com a stack.
 
-## MVP
-- Auth local/social com base para RBAC.
-- Estrutura de assinaturas e billing.
-- Modulo admin com trilha de auditoria.
-- Pipelines de qualidade e deploy.
-
-## Stack
-- React + TypeScript + Vite
-- Node + Express + TypeScript
-- CI com lint/test/build/audit
+## Endpoints principais
+- `GET /health`
+- `GET /api/meta`
+- `GET /api/work-items`
+- `GET /api/work-items/export.csv`
+- `POST /api/work-items`
+- `PATCH /api/work-items/:id/toggle`
+- `DELETE /api/work-items/:id`
 
 ## Setup
-1. npm install --include=dev
-2. npm run bootstrap
-3. npm run dev
+1. `npm install --include=dev`
+2. `npm run bootstrap`
+3. `npm run dev`
 
-## Monetizacao
-Venda de licenca + servico de implantacao.
+## Qualidade
+- `npm run quality` executa lint + testes + build no backend e frontend.
+
+## Marca
+DouglasDev
