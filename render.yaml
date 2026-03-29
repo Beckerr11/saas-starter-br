@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: saas-starter-br-api
+    env: node
+    rootDir: backend
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm run start
+    healthCheckPath: /health
+  - type: static
+    name: saas-starter-br-web
+    rootDir: frontend
+    buildCommand: npm ci --include=dev && npm run build
+    staticPublishPath: dist
