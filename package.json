@@ -6,11 +6,12 @@
     "bootstrap": "npm --prefix backend install --include=dev && npm --prefix frontend install --include=dev",
     "dev": "concurrently -n BACKEND,FRONTEND -c cyan,magenta \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
     "lint": "npm --prefix backend run lint && npm --prefix frontend run lint",
-    "test": "npm --prefix backend run test && npm --prefix frontend run test",
+    "test:portability": "node --test tests/*.test.mjs",
+    "test": "npm run test:portability && npm --prefix backend run test && npm --prefix frontend run test",
     "build": "node -e \"const { execSync } = require('node:child_process'); const options = { stdio: 'inherit' }; if (process.env.VERCEL) { execSync('npm --prefix frontend install --include=dev', options); execSync('npm --prefix frontend run build', options); } else { execSync('npm --prefix backend run build && npm --prefix frontend run build', options); }\"",
     "quality": "npm run lint && npm run test && npm run build"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^10.0.4"
   }
 }
