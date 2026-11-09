@@ -8,7 +8,7 @@ import pino from "pino";
 import { z } from "zod";
 
 const projectProfile = {
-  "brand": "DouglasDev",
+  "brand": "Becker",
   "name": "SaaS Starter BR",
   "slug": "saas-starter-br",
   "tagline": "Base full stack para lancamento rapido de SaaS no mercado brasileiro.",
@@ -56,7 +56,7 @@ const projectProfile = {
     }
   ]
 } as const;
-const platformBrand = "DouglasDev";
+const platformBrand = "Becker";
 
 type WorkItemStatus = "open" | "done";
 type Priority = "high" | "medium" | "low";
