@@ -57,10 +57,10 @@ type Preferences = {
   search: string;
 };
 
-const platformBrand = "DouglasDev";
+const platformBrand = "Becker";
 
 const profileDefaults = {
-  "brand": "DouglasDev",
+  "brand": "Becker",
   "name": "SaaS Starter BR",
   "slug": "saas-starter-br",
   "tagline": "Base full stack para lancamento rapido de SaaS no mercado brasileiro.",
@@ -697,7 +697,7 @@ export default function App() {
 
         <section className="section split" data-reveal>
           <article>
-            <p className="label">Execucao DouglasDev</p>
+            <p className="label">Execucao Becker</p>
             <h2>Playbook claro para entregar com consistencia.</h2>
             <ol className="track">
               {meta.workflow.map((step) => (
@@ -719,7 +719,7 @@ export default function App() {
         <p>
           {platformBrand} • {meta.name}
         </p>
-        <p>{new Date().getFullYear()} - DouglasDev</p>
+        <p>{new Date().getFullYear()} - Becker</p>
       </footer>
     </div>
   );
